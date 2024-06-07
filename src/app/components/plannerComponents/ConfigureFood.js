@@ -1,10 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import {
-  useConfigureSotre,
-  useOverviewStore,
-  useDayStore,
-} from "@/app/store/store";
+import { useConfigureSotre, useDayStore } from "@/app/store/store";
 import { v4 as uuidv4 } from "uuid";
 import ItemInfo from "./configurefood/ItemInfo";
 import AddAllDays from "./configurefood/AddAllDays";
