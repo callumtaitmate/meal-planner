@@ -22,9 +22,9 @@ export function AddFood({}) {
   };
 
   return (
-    <div className="bg-white rounded-lg p-6 shadow-md">
+    <div className="bg-gray-100 rounded-lg p-6">
       <h3 className="text-xl font-semibold mb-3">Add Food</h3>
-      <div className="bg-gray-100 p-2 rounded-lg shadow-sm">
+      <div className="bg-gray-100 rounded-lg">
         <p className="text-xs text-red-400 font-semibold my-1">
           (Basic Search Functionality)
         </p>
@@ -35,6 +35,7 @@ export function AddFood({}) {
             placeholder="Search for food"
             onChange={(e) => handleChange(e.target.value)}
           />
+          
           <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
             <svg
               xmlns="http://www.w3.org/2000/svg"

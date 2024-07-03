@@ -13,11 +13,11 @@ export function Overview() {
   }));
 
   return (
-    <div className="bg-white rounded-lg p-6 shadow-md">
+    <div className="bg-gray-100 rounded-lg p-6">
       <h3 className="text-xl font-semibold mb-3">Weekly Overview</h3>
       <Weeks />
       <OverviewItem />
-      <div className="bg-gray-100 rounded-lg px-3 py-2 shadow-md mt-2">
+      <div className="bg-gray-100 rounded-lg py-2 mt-2">
         <DayTotal />
         <div>
           <WeekTotal />

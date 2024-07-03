@@ -13,14 +13,14 @@ export default function AddCurrentDay({ hello, postCalcObject }) {
   };
 
   return (
-    <div>
+    <div className="bg-gray-100">
       <button
         disabled={hello.result.food.label == "Add food to start"}
         onClick={() => handleClick(postCalcObject)}
         className={
           hello.result.food.label == "Add food to start"
-            ? " cursor-not-allowed bg-blue-300 hover:bg-blue-300 text-white text-xs font-bold py-1 px-4 mr-2 rounded focus:outline-none focus:shadow-outline"
-            : " bg-blue-500 hover:bg-blue-500 text-white text-xs font-bold py-1 px-4 mr-2 rounded focus:outline-none focus:shadow-outline"
+            ? " cursor-not-allowed bg-blue-300 hover:bg-blue-300 text-white text-xs font-bold py-1 px-4 mr-2 rounded focus:outline-none"
+            : " bg-blue-500 hover:bg-blue-500 text-white text-xs font-bold py-1 px-4 mr-2 rounded focus:outline-none"
         }
       >
         + Current Day

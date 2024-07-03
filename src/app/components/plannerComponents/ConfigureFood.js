@@ -63,14 +63,14 @@ export function ConfigureFood() {
   };
 
   return (
-    <div className="bg-white rounded-lg p-6 shadow-md">
+    <div className="bg-gray-100 rounded-lg p-6">
       <h3 className="text-xl font-semibold mb-3">Configure Food</h3>
-      <div className="scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar scrollbar-thumb-gray-400 scrollbar-track-slate-300 bg-white shadow-md rounded-lg overflow-hidden max-h-80 overflow-y-auto">
+      <div className="scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar scrollbar-thumb-gray-400 scrollbar-track-slate-300 bg-gray-100 rounded-lg overflow-hidden max-h-80 overflow-y-auto">
         <ul>
-          <li className="border-b border-gray-200 bg-gray-100">
+          <li className="bg-gray-100">
             <div>
               <ItemInfo hello={hello} quantity={postCalcObject.quantity} />
-              <div className="px-3 py-2 mt-1">
+              <div className="px-1 py-2 mt-1">
                 <h3 className="text-xs font-semibold text-gray-500">
                   Adjust Weight <span>(Grams)</span>
                 </h3>
@@ -95,7 +95,7 @@ export function ConfigureFood() {
                   Protein
                 </p>
               </div>
-              <div className="px-3 py-2">
+              <div className="px-1 py-2">
                 <h3 className="text-xs font-semibold text-gray-500">
                   Price <span>(GBP)</span>
                 </h3>
@@ -109,7 +109,7 @@ export function ConfigureFood() {
                   className="mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                 />
               </div>
-              <div className="flex justify-end mt-2 mb-2">
+              <div className="bg-gray-100 flex justify-end mt-2 mb-2">
                 <AddCurrentDay postCalcObject={postCalcObject} hello={hello} />
                 <div className="">
                   <AddAllDays postCalcObject={postCalcObject} hello={hello} />
