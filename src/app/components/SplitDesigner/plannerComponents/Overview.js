@@ -14,12 +14,14 @@ export function Overview() {
 
   return (
     <div className="bg-gray-100 rounded-lg p-6">
-      <h3 className="text-xl font-semibold mb-3">Weekly Overview</h3>
+      <h3 className="text-xl font-semibold mb-3">Session Overview</h3>
       <Weeks />
       <div className="mt-2">
         <OverviewItem />
       </div>
       <div className="bg-gray-100 rounded-lg py-2 mt-2">
+        
+      <h3 className="text-xl font-semibold mb-3">Breakdown</h3>
         <div>
           <DayTotal />
           <WeekTotal />
