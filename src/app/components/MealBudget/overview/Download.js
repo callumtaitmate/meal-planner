@@ -7,7 +7,6 @@ export default function Download() {
   const { data } = useOverviewStore((state) => ({
     data: state.overview,
   }));
-  console.log(data);
   if (data.length == 0)
     return (
       <div className="mt-1 text-center cursor-not-allowed bg-blue-300 text-white text-xs font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline">
