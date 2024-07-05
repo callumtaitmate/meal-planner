@@ -15,6 +15,21 @@ export const useOverviewStore = create((set) => ({
   clearAll: () => set({ overview: [] }),
 }));
 
+export const useExerciseStore = create((set) => ({
+  overview: [],
+  addToOverview: (postCalcObject) =>
+    set((state) => ({ overview: [...state.overview, postCalcObject] })),
+
+  clearItem: (foodId, foodDay) =>
+    set((state) => ({
+      overview: state.overview.filter(
+        (foods) => foods.configure.result.id !== foodId || foods.configure.result.day !== foodDay
+      ),
+    })),
+
+  clearAll: () => set({ overview: [] }),
+}));
+
 export const useConfigureSotre = create((set) => ({
   configure: {
     result: {
@@ -50,6 +65,34 @@ export const useConfigureSotre = create((set) => ({
               PROCNT: 0,
             },
           },
+        },
+      },
+    }),
+}));
+
+export const useMovementStore = create((set) => ({
+  exercise: {
+    result: {
+      sets: 3,
+      reps: 8,
+      weight: 100,
+      day: "Monday",
+      name: "Add Exercise to Start",
+      id: ""
+    },
+  },
+  addExercise: (result) => set((state) => ({ exercise: { result } })),
+
+  clearExercise: () =>
+    set({
+      exercise: {
+        result: {
+          sets: 3,
+          reps: 8,
+          weight: 100,
+          day: "Monday",
+          name: "Add Exercise to Start",
+          id: ""
         },
       },
     }),
