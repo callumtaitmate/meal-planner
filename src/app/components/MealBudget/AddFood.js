@@ -30,7 +30,7 @@ export function AddFood({}) {
         </p>
         <div className="relative mb-4 rounded-m">
           <input
-            className="mt-1 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500 block w-full shadow-sm sm:text-sm rounded-md"
+            className="mt-1 py-1 pl-1 focus:outline-none focus:ring-2 focus:ring-blue-500 block w-full shadow-sm sm:text-sm rounded-md"
             type="text"
             placeholder="Search for food"
             onChange={(e) => handleChange(e.target.value)}

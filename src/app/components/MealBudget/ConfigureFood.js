@@ -61,6 +61,7 @@ export function ConfigureFood() {
     id: id,
     day: day,
   };
+  console.log(postCalcObject.label);
 
   return (
     <div className="bg-gray-100 rounded-lg p-6">
@@ -69,33 +70,38 @@ export function ConfigureFood() {
         <ul>
           <li className="bg-gray-100">
             <div>
-              <ItemInfo hello={hello} quantity={postCalcObject.quantity} />
-              <div className="px-1 py-2 mt-1">
+              <div className="px-1 py-2">
                 <h3 className="text-xs font-semibold text-gray-500">
                   Adjust Weight <span>(Grams)</span>
                 </h3>
-
-                <input
-                  type="number"
-                  id="quantity"
-                  name="quantity"
-                  value={quantity}
-                  required
-                  onChange={(e) => handleQuantity(e.target.valueAsNumber)}
-                  className="mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500 block w-full shadow-sm sm:text-sm rounded-md"
+                <div className="flex mb-2">
+                  <input
+                    type="number"
+                    id="quantity"
+                    name="quantity"
+                    value={quantity}
+                    required
+                    onChange={(e) => handleQuantity(e.target.valueAsNumber)}
+                    className="mt-1 pl-1 focus:outline-none focus:ring-2 focus:ring-blue-500 block w-full shadow-sm sm:text-sm rounded-md"
+                  />
+                  <button
+                    className="bg-green-500 hover:bg-green-600 text-white text-xs font-bold py-1 px-2 mr-2 mt-2 rounded focus:outline-none focus:shadow-outline"
+                    onClick={() => updateMacros()}
+                  >
+                    Recalculate
+                  </button>
+                </div>
+                <ItemInfo
+                  hello={hello}
+                  kcal={kcal}
+                  carb={carb}
+                  fat={fat}
+                  prot={prot}
+                  quantity={quantity}
                 />
-                <button
-                  className="bg-green-500 hover:bg-green-600 text-white text-xs font-bold py-1 px-2 mr-2 mt-2 rounded focus:outline-none focus:shadow-outline"
-                  onClick={() => updateMacros()}
-                >
-                  Recalculate Macros
-                </button>
-                <p className="mt-3 text-xs text-center text-white bg-gray-500 py-1 px-2 mr-2 rounded focus:outline-none focus:shadow-outline">
-                  <b>{kcal}kCal</b> - {carb}g Carbs | {fat}g Fat | {prot}g
-                  Protein
-                </p>
               </div>
-              <div className="px-1 py-2">
+
+              <div className="px-1 mb-2">
                 <h3 className="text-xs font-semibold text-gray-500">
                   Price <span>(GBP)</span>
                 </h3>
@@ -106,7 +112,7 @@ export function ConfigureFood() {
                   value={price}
                   required
                   onChange={(e) => handlePrice(e.target.valueAsNumber)}
-                  className="mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                  className="mt-1 pl-1 focus:outline-none focus:ring-2 focus:ring-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                 />
               </div>
               <div className="bg-gray-100 flex justify-end mt-2 mb-2">
