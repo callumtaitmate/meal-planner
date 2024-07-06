@@ -10,7 +10,7 @@ export default function Planner() {
   };
 
   return (
-    <div className="min-h-screen max-w-7xl py-4 mx-auto sm:py-8 sm:px-8 lg:px-8">
+    <div className="min-h-screen max-w-7xl py-4 px-4 mx-auto sm:py-8 sm:px-8 lg:px-8 lg:py-8 xs:px-8 xs:py-8">
       <label className="inline-flex items-center rounded-md cursor-pointer dark:text-gray-100 text-xs">
         <input
           onClick={handleCheckboxChange}
